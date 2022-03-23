@@ -1,0 +1,73 @@
+### Register User
+POST http://localhost:3000/products/register
+Content-Type: application/json
+
+{
+    "email":"qwerty123@gmail.com",
+    "username":"qwerty123",
+    "password": "qwerty123"
+}
+### Login User
+POST http://localhost:3001/products/login
+Content-Type: application/json
+
+{
+    "username":"qwerty123",
+    "password": "qwerty123"
+}
+
+### Getting all product
+GET http://localhost:3000/products
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiX2lkIjoiNjEzNGNjMmQwNDhhNjUyN2U0M2FiNDFjIiwiZW1haWwiOiJxd2VydHkxMjNAZ21haWwuY29tIiwidXNlcm5hbWUiOiJxd2VydHkxMjMiLCJwYXNzd29yZCI6IiQyYSQxMCQ1UldqTXA3a1pKbXVzRnFJTGdxd1F1dWJlR1ZRcWhKL2liTUhCNjVlQkV5RG0uaGhGVkRJUyIsImFjdHVhbHBhc3N3b3JkIjoicXdlcnR5MTIzIiwiX192IjowfSwiaWF0IjoxNjMwODUwMDkzfQ.eZ8p0TlNggCOAqAq54I1rbvMrgk5k8eaqrA4CkNSAUU
+### Create a product
+POST http://localhost:3000/products
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiX2lkIjoiNjEzNGNjMmQwNDhhNjUyN2U0M2FiNDFjIiwiZW1haWwiOiJxd2VydHkxMjNAZ21haWwuY29tIiwidXNlcm5hbWUiOiJxd2VydHkxMjMiLCJwYXNzd29yZCI6IiQyYSQxMCQ1UldqTXA3a1pKbXVzRnFJTGdxd1F1dWJlR1ZRcWhKL2liTUhCNjVlQkV5RG0uaGhGVkRJUyIsImFjdHVhbHBhc3N3b3JkIjoicXdlcnR5MTIzIiwiX192IjowfSwiaWF0IjoxNjMwODUwMDkzfQ.eZ8p0TlNggCOAqAq54I1rbvMrgk5k8eaqrA4CkNSAUU
+
+{
+    "name":"iphone X new",
+    "price":999
+}
+### Get a product by id
+GET http://localhost:3000/products/60efe9b7ec29215cba168662
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwZWZlOGY2ZWMyOTIxNWNiYTE2ODY1YyIsImVtYWlsIjoicmF2aTEyM0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYSQxMCRXY0JXQk9ueWp1Z01takFpZUJwRzJlaEE2RUNGaWJCNHJyMm43R2g2WFg0Lzh2ODRpVGF2TyIsImFjdHVhbHBhc3N3b3JkIjoicmF2aTEyMyIsIl9fdiI6MH0sImlhdCI6MTYyNjMzNTUzM30.CUnSLI-lKjJjdxmckwP-k3yV3cpUjArDevSZKxjZR_Q
+
+### Update a product by id
+PATCH  http://localhost:3000/products/60efe9b7ec29215cba168662
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwZWZlOGY2ZWMyOTIxNWNiYTE2ODY1YyIsImVtYWlsIjoicmF2aTEyM0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYSQxMCRXY0JXQk9ueWp1Z01takFpZUJwRzJlaEE2RUNGaWJCNHJyMm43R2g2WFg0Lzh2ODRpVGF2TyIsImFjdHVhbHBhc3N3b3JkIjoicmF2aTEyMyIsIl9fdiI6MH0sImlhdCI6MTYyNjMzNTUzM30.CUnSLI-lKjJjdxmckwP-k3yV3cpUjArDevSZKxjZR_Q
+
+{
+    "name":"iphone X old",
+    "price": 299
+}
+### Delete a product by id
+DELETE  http://localhost:3000/products/60efe9b7ec29215cba168662
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwZWZlOGY2ZWMyOTIxNWNiYTE2ODY1YyIsImVtYWlsIjoicmF2aTEyM0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYSQxMCRXY0JXQk9ueWp1Z01takFpZUJwRzJlaEE2RUNGaWJCNHJyMm43R2g2WFg0Lzh2ODRpVGF2TyIsImFjdHVhbHBhc3N3b3JkIjoicmF2aTEyMyIsIl9fdiI6MH0sImlhdCI6MTYyNjMzNTUzM30.CUnSLI-lKjJjdxmckwP-k3yV3cpUjArDevSZKxjZR_Q
+### Search a product by keyword
+GET  http://localhost:3000/products/search/old
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwZWZlOGY2ZWMyOTIxNWNiYTE2ODY1YyIsImVtYWlsIjoicmF2aTEyM0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYSQxMCRXY0JXQk9ueWp1Z01takFpZUJwRzJlaEE2RUNGaWJCNHJyMm43R2g2WFg0Lzh2ODRpVGF2TyIsImFjdHVhbHBhc3N3b3JkIjoicmF2aTEyMyIsIl9fdiI6MH0sImlhdCI6MTYyNjMzNTUzM30.CUnSLI-lKjJjdxmckwP-k3yV3cpUjArDevSZKxjZR_Q
+
+### Something else 
+GET http://localhost:3000/id
+
+### Testing
+GET http://localhost:3000/test?name=iMac&price=2399
+
+### Testing
+GET http://localhost:3000/test/0192374/iMac
+
+### 
+POST http://localhost:3000/test/
+Content-Type: application/json
+
+{
+    "name":"iMacPro",
+    "price": 4999
+}
+
+### 
+POST http://localhost:3000/test/
+Content-Type: application/x-www-form-urlencoded
+
+name=iMac&price=4999
